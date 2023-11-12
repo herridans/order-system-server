@@ -3,12 +3,15 @@ package com.sean.oss.services;
 import java.util.List;
 
 import com.sean.oss.entities.Food;
+import com.sean.oss.models.CreateFoodModel;
+import com.sean.oss.models.UpdateFoodModel;
 
 public interface IFoodService {
 
 	List<Food> getAllFoods();
-	Food getFood(long id);
-	Food createFood();
-	Food updateFood();
-	void deleteFood(long id);
+	List<Food> getFoodsByCategory(String categoryId);
+	Food getFood(String id);
+	Food createFood(CreateFoodModel request);
+	Food updateFood(UpdateFoodModel request);
+	void deleteFood(String id);
 }

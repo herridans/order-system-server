@@ -1,6 +1,5 @@
 package com.sean.oss.entities;
 
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -14,11 +13,11 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "Food")
+@Document(collection = "Foods")
 public class Food {
 
 	@Id
-	private ObjectId id;
+	private String id;
 	private String name;
 	private String description;
 	private double price;
